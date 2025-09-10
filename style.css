@@ -305,16 +305,24 @@ section h2 {
 }
 
 /* === FORMULÁRIO DE CONTATO === */
+
+strong{
+ color:black;
+ font-size: 25px;
+
+}
+
 .contato {
   width: 100%;
   max-width: 500px;
   margin: 40px auto;
   padding: 30px;
-  background: linear-gradient(90deg, #ffde59, #ff914d);
+  background: linear-gradient(90deg, #156bb1,#5cabec);
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  color:white;
 }
 
 .contato h3 {
@@ -499,7 +507,7 @@ section h2 {
     top: 60px;
     left: 0;
     width: 100%;
-    background: linear-gradient(90deg, #ffde59, #ff914d);
+    background: linear-gradient(90deg, #ffde59, #ac4d13);
     box-shadow: 0 2px 5px rgba(255, 165, 0, 0.3);
     padding: 10px 0;
     z-index: 999;
