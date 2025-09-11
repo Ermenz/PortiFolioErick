@@ -274,7 +274,7 @@ section h2 {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: url('/PortiFolioErick/Lampadaideia.png') no-repeat center center / cover;
+  background: url('/images/Lampadaideia.png') no-repeat center center / cover;
   box-shadow: 0 0 20px 5px rgba(255, 165, 0, 0.7);
   cursor: pointer;
   flex-shrink: 0; /* evita que a imagem encolha */
@@ -327,7 +327,7 @@ section h2 {
 
 
 .container_redondo {
-  background: url(/PortiFolioErick/Erick.jpg) no-repeat center center / cover;
+  background: url(/images/Erick.jpg) no-repeat center center / cover;
   border: 3px solid rgb(186, 204, 22);
   border-radius: 50%;
   position: relative;
