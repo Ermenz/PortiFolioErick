@@ -16,6 +16,45 @@ body {
   position: relative;
 }
 
+/* Estilo para o contêiner de botões */
+.button-container {
+  display: flex;
+  justify-content: flex-start; /* Alinha os botões à esquerda */
+  align-items: center; /* Alinha verticalmente os botões ao centro */
+  gap: 10px; /* Adiciona um pequeno espaçamento entre os botões */
+}
+
+/* Estilo do botão de descrição */
+.descricao {
+  display: none; /* Inicialmente escondido */
+  margin-top: 10px;
+  padding: 10px;
+  background: linear-gradient(90deg, #ffde59, #ff914d);
+  border: 0.5px solid #ddd;
+  border-radius: 5px;
+  color: rgb(12, 10, 10);
+}
+
+/* Estilo do botão toggle */
+.toggle-btn {
+  margin-left: -180px;
+  padding: 2px 6px; /* Botão ainda menor */
+  cursor: pointer;
+  background-color: #a7d4d4 !important;
+  color: rgb(17, 14, 14) !important;
+  border: none;
+  border-radius: 25px !important;
+  font-size: 0.8rem !important;
+}
+
+.toggle-btn:hover {
+  background-color: #7b969e; /* Azul mais intenso ao passar o mouse */
+}
+
+
+
+
+
 /* === HEADER E NAVEGAÇÃO === */
 header {
   position: fixed;
@@ -63,7 +102,7 @@ header {
   background: linear-gradient(90deg, #ffde59, #ff914d);
   padding: 20px;
   text-align: center;
-  color: #333;
+  color: #9c9595;
   font-weight: 500;
   box-shadow: 0 -2px 5px rgba(255, 165, 0, 0.3);
   margin-top: 40px;
@@ -307,8 +346,8 @@ section h2 {
 /* === FORMULÁRIO DE CONTATO === */
 
 strong{
- color:black;
- font-size: 25px;
+ color:rgb(245, 239, 239);
+ font-size: 16px;
 
 }
 
@@ -989,6 +1028,12 @@ strong{
   user-select: none;
 }
 
+
+
+
+
+
+
 @media (min-width: 1440px) {
   section {
     max-width: 1200px;
@@ -1009,6 +1054,25 @@ strong{
     left: -500px;
   }
 
+
+
+
+.toggle-btn {
+  margin-left: 10px;
+  padding: 2px 6px; /* Botão ainda menor */
+  cursor: pointer;
+  background-color: #4f97a3; /* Tom de azul suave */
+  color: rgb(27, 11, 11);
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem; /* Tamanho de fonte ainda mais reduzido */
+}
+
+.toggle-btn:hover {
+  background-color: #366f7f; /* Azul mais intenso ao passar o mouse */
+}
+
+  
 
 
   .container_redondo {

@@ -9,3 +9,16 @@ function toggleMenu() {
     }
   }
   
+
+  function toggleDescription(id) {
+  const descricao = document.getElementById(`descricao-${id}`);
+  const button = descricao.previousElementSibling.querySelector('.toggle-btn');
+
+  if (descricao.style.display === 'none' || descricao.style.display === '') {
+    descricao.style.display = 'block';
+    button.textContent = '-';
+  } else {
+    descricao.style.display = 'none';
+    button.textContent = '+';
+  }
+}
