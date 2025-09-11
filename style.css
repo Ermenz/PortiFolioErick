@@ -324,7 +324,7 @@ section h2 {
 /* Ícone de formulário */
 .icones-sociais a.form-icon:hover {
   color: #007BFF; /* azul para o formulário */
-
+}
 
 .container_redondo {
   background: url(/images/Erick.jpg) no-repeat center center / cover;
