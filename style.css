@@ -723,11 +723,32 @@ strong{
   }
 }
 
+.pergunta-container {
+    flex-direction: column;   /* em telas menores, pergunta em cima e botão embaixo */
+    align-items: stretch;     /* botão ocupa a largura toda */
+  }
+
+
+
+.toggle-btn {
+  width: 50px !important;             /* Botão ocupa a largura toda em telas pequenas */
+  text-align: center;
+  margin-top: 8px;
+  margin-left: 3px;
+  margin
+}
+
 @media (min-width: 768px) {
   .container-alinhado {
     flex-direction: row;
     justify-content: center;
     text-align: left;
+  }
+
+  .toggle-btn {
+    width: 50px !important;             /* Botão ocupa a largura toda em telas pequenas */
+    text-align: center;
+    margin-top: 8px;
   }
 
   .texto-grande h1 {
@@ -1064,6 +1085,22 @@ strong{
   justify-content: space-between; /* Pergunta à esquerda e botão ao lado */
   gap: 10px;             /* Espaço entre pergunta e botão */
   margin-bottom: 15px;   /* Espaçamento entre blocos */
+}
+
+/* Botão toggle corrigido */
+.toggle-btn {
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #a7d4d4 !important;
+  color: rgb(17, 14, 14) !important;
+  border: none;
+  border-radius: 25px !important;
+  font-size: 0.85rem !important;
+  margin-left: 0; /* remove o deslocamento negativo */
+}
+
+.toggle-btn:hover {
+  background-color: #7b969e;
 }
 
 
