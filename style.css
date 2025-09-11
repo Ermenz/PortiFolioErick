@@ -1057,20 +1057,15 @@ strong{
 
 
 
-.toggle-btn {
-  margin-left: 10px;
-  padding: 2px 6px; /* Botão ainda menor */
-  cursor: pointer;
-  background-color: #4f97a3; /* Tom de azul suave */
-  color: rgb(27, 11, 11);
-  border: none;
-  border-radius: 5px;
-  font-size: 0.8rem; /* Tamanho de fonte ainda mais reduzido */
+/* Contêiner da pergunta e botão juntos */
+.pergunta-container {
+  display: flex;
+  align-items: center;   /* Alinha verticalmente */
+  justify-content: space-between; /* Pergunta à esquerda e botão ao lado */
+  gap: 10px;             /* Espaço entre pergunta e botão */
+  margin-bottom: 15px;   /* Espaçamento entre blocos */
 }
 
-.toggle-btn:hover {
-  background-color: #366f7f; /* Azul mais intenso ao passar o mouse */
-}
 
   
 
