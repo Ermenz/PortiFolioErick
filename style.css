@@ -738,18 +738,15 @@ strong{
   margin
 }
 
-@media (min-width: 768px) {
+@media (min-width:768px) {
+
   .container-alinhado {
+
     flex-direction: row;
     justify-content: center;
     text-align: left;
   }
 
-  .toggle-btn {
-    width: 50px !important;             /* Botão ocupa a largura toda em telas pequenas */
-    text-align: center;
-    margin-top: 8px;
-  }
 
   .texto-grande h1 {
     font-size: 3.5rem;
@@ -818,7 +815,9 @@ strong{
     left: 185px;
     position: relative;
   }
+
 }
+
 
 @media (min-width: 1200px) {
 
@@ -1096,7 +1095,7 @@ strong{
   border: none;
   border-radius: 25px !important;
   font-size: 0.85rem !important;
-  margin-left: 0; /* remove o deslocamento negativo */
+  margin-left: -180px; /* remove o deslocamento negativo */
 }
 
 .toggle-btn:hover {
