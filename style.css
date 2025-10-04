@@ -410,17 +410,14 @@ section p {
 
 
 
-.linkedin-icon i {
-  color: #0A66C2; /* azul oficial do LinkedIn */
+.linkedin{
+  color: #0A66C2 !important; /* azul oficial do LinkedIn */
   transition: color 0.3s;
 }
 
-.linkedin-icon i:hover {
-  color: #004182; /* azul mais escuro ao passar o mouse */
+.linkedin:hover{
+  color: #16324e; /* azul mais escuro ao passar o mouse */
 }
-
-
-
 
 
 
