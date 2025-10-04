@@ -418,3 +418,146 @@ section p {
 .linkedin-icon i:hover {
   color: #004182; /* azul mais escuro ao passar o mouse */
 }
+
+
+
+
+
+
+/* === RESPONSIVIDADE CELULAR === */
+@media (max-width: 768px) {
+
+  /* Cabeçalho */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nome-emoji {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .nome-header {
+    font-size: 1.3rem;
+  }
+
+  .emoji {
+    font-size: 1.5rem;
+    margin-left: 6px;
+  }
+
+  /* Menu */
+  .nav-wrapper {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
+    border-radius: 0 0 12px 12px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0.8rem 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+  /* Seção inicial */
+  .container-alinhado {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .imagem-redonda {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .texto-grande h1 {
+    font-size: 1.8rem;
+  }
+
+  .botao-inspirador button {
+    width: 80%;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  /* Ícones sociais */
+  .icones-sociais {
+    justify-content: center;
+  }
+
+  .icones-sociais a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  /* Skills */
+  .skills-grid {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .skill-card {
+    width: 70px;
+    padding: 8px;
+  }
+
+  .skills-section h2 {
+    font-size: 1.5rem;
+  }
+
+  /* FAQ / Perguntas */
+  .pergunta {
+    padding: 0.8rem;
+  }
+
+  .toggle-btn {
+    width: 22px;
+    height: 22px;
+    font-size: 0.9rem;
+  }
+
+  /* Formulário Fale Comigo */
+  .contato-form {
+    padding: 20px;
+  }
+
+  .contato-form h2 {
+    font-size: 24px;
+  }
+
+  .contato-form input,
+  .contato-form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contato-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
