@@ -22,3 +22,17 @@ function toggleMenu() {
     button.textContent = '+';
   }
 }
+
+
+
+
+function toggleMenu() {
+  const nav = document.querySelector("nav ul");
+  nav.classList.toggle("show");
+}
+
+function toggleDescription(id) {
+  const pergunta = document.getElementById(`descricao-${id}`).parentElement;
+  pergunta.classList.toggle("open");
+}
+
