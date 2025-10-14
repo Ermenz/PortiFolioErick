@@ -1,3 +1,94 @@
+/* Área onde a cobra vai se mover */
+.snake-area{
+  width: 100%;
+  max-width: 800px;      /* ajuste conforme quiser */
+  height: 300px;         /* altura do espaço da cobra */
+  margin: 1.5rem auto;
+  background: linear-gradient(135deg, #f8f9fc, #e3e7f1);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* estilo base do segmento da cobra */
+.snake-area .segment{
+  position: absolute;
+  width: 38px;           /* tamanho do segmento - altera espessura da cobra */
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#382ecc,#404adf);
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+  top: 50%;
+  left: -50px;           /* começa fora da área à esquerda */
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: slither 8s linear infinite;
+  will-change: transform;
+ 
+}
+
+/* cores e tamanho menores para cauda — cada nth-child adapta visual */
+.snake-area .segment:nth-child(odd){ background: linear-gradient(135deg,#4c26b3,#455ad1); }
+.snake-area .segment:nth-child(2){ transform-origin: center; animation-delay: 0.12s; width: 36px; height: 36px; }
+.snake-area .segment:nth-child(3){ animation-delay: 0.24s; width: 34px; height: 34px; opacity: .95; }
+.snake-area .segment:nth-child(4){ animation-delay: 0.36s; width: 32px; height: 32px; opacity: .9; }
+.snake-area .segment:nth-child(5){ animation-delay: 0.48s; width: 30px; height: 30px; opacity: .85; }
+.snake-area .segment:nth-child(6){ animation-delay: 0.60s; width: 28px; height: 28px; opacity: .8; }
+.snake-area .segment:nth-child(7){ animation-delay: 0.72s; width: 26px; height: 26px; opacity: .75; }
+.snake-area .segment:nth-child(8){ animation-delay: 0.84s; width: 24px; height: 24px; opacity: .7; }
+.snake-area .segment:nth-child(9){ animation-delay: 0.96s; width: 22px; height: 22px; opacity: .65; }
+.snake-area .segment:nth-child(10){ animation-delay: 1.08s; width: 20px; height: 20px; opacity: .6; }
+
+/* keyframes que descrevem o caminho — edite posições para ajustar curva */
+@keyframes slither {
+  0% {
+    transform: translate(-50%, -50%) translateX(0px) translateY(0px) rotate(0deg);
+    left: -10%;
+    top: 40%;
+  }
+  10% {
+    left: 10%;
+    top: 30%;
+    transform: translate(-50%,-50%) rotate(-10deg);
+  }
+  25% {
+    left: 35%;
+    top: 24%;
+    transform: translate(-50%,-50%) rotate(-20deg);
+  }
+  40% {
+    left: 60%;
+    top: 36%;
+    transform: translate(-50%,-50%) rotate(8deg);
+  }
+  55% {
+    left: 80%;
+    top: 52%;
+    transform: translate(-50%,-50%) rotate(30deg);
+  }
+  70% {
+    left: 60%;
+    top: 68%;
+    transform: translate(-50%,-50%) rotate(160deg);
+  }
+  85% {
+    left: 30%;
+    top: 62%;
+    transform: translate(-50%,-50%) rotate(200deg);
+  }
+  100% {
+    left: -10%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+
+/* responsivo: reduz a cobra em telas pequenas */
+@media (max-width:520px){
+  .snake-area{ height: 220px; }
+  .snake-area .segment{ width: 28px; height: 28px; }
+  .snake-area .segment:nth-child(10){ width: 16px; height: 16px; }
+}
+
 /* === RESET E BASE === */
 * {
   margin: 0;
