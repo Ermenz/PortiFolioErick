@@ -82,12 +82,26 @@
   }
 }
 
+
 /* responsivo: reduz a cobra em telas pequenas */
 @media (max-width:520px){
   .snake-area{ height: 220px; }
   .snake-area .segment{ width: 28px; height: 28px; }
   .snake-area .segment:nth-child(10){ width: 16px; height: 16px; }
 }
+
+
+/* Estrea 3D*/
+
+#star-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+  overflow: hidden;
+}
+
+
+
 
 /* === RESET E BASE === */
 * {
