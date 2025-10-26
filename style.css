@@ -342,11 +342,11 @@ section p {
   font-size: 1rem;
 }
 
-.descricao {
-  display: none;
-  margin-top: 0.8rem;
-  color: #555;
+.pergunta .descricao {
+  display: block;
+  animation: fadeIn 0.4s ease;
 }
+
 
 .pergunta.open .descricao {
   display: block;
