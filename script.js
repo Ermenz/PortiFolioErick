@@ -19,3 +19,19 @@ function toggleNavMenu() {
   const nav = document.querySelector("nav ul");
   nav.classList.toggle("show");
 }
+
+
+
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const id = this.getAttribute('href');
+    const section = document.querySelector(id);
+    const offset = section.offsetTop - (window.innerHeight / 2) + (section.offsetHeight / 2);
+    
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    });
+  });
+});
