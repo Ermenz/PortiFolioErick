@@ -1,8 +1,10 @@
 /* Área onde a cobra vai se mover */
-.snake-area{
+.snake-area {
   width: 100%;
-  max-width: 800px;      /* ajuste conforme quiser */
-  height: 300px;         /* altura do espaço da cobra */
+  max-width: 800px;
+  /* ajuste conforme quiser */
+  height: 300px;
+  /* altura do espaço da cobra */
   margin: 1.5rem auto;
   background: linear-gradient(135deg, #f8f9fc, #e3e7f1);
   border-radius: 12px;
@@ -11,32 +13,90 @@
 }
 
 /* estilo base do segmento da cobra */
-.snake-area .segment{
+.snake-area .segment {
   position: absolute;
-  width: 38px;           /* tamanho do segmento - altera espessura da cobra */
+  width: 38px;
+  /* tamanho do segmento - altera espessura da cobra */
   height: 38px;
   border-radius: 50%;
-  background: linear-gradient(135deg,#382ecc,#404adf);
-  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+  background: linear-gradient(135deg, #382ecc, #404adf);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
   top: 50%;
-  left: -50px;           /* começa fora da área à esquerda */
+  left: -50px;
+  /* começa fora da área à esquerda */
   transform: translate(-50%, -50%) rotate(0deg);
   animation: slither 8s linear infinite;
   will-change: transform;
- 
+
 }
 
 /* cores e tamanho menores para cauda — cada nth-child adapta visual */
-.snake-area .segment:nth-child(odd){ background: linear-gradient(135deg,#4c26b3,#455ad1); }
-.snake-area .segment:nth-child(2){ transform-origin: center; animation-delay: 0.12s; width: 36px; height: 36px; }
-.snake-area .segment:nth-child(3){ animation-delay: 0.24s; width: 34px; height: 34px; opacity: .95; }
-.snake-area .segment:nth-child(4){ animation-delay: 0.36s; width: 32px; height: 32px; opacity: .9; }
-.snake-area .segment:nth-child(5){ animation-delay: 0.48s; width: 30px; height: 30px; opacity: .85; }
-.snake-area .segment:nth-child(6){ animation-delay: 0.60s; width: 28px; height: 28px; opacity: .8; }
-.snake-area .segment:nth-child(7){ animation-delay: 0.72s; width: 26px; height: 26px; opacity: .75; }
-.snake-area .segment:nth-child(8){ animation-delay: 0.84s; width: 24px; height: 24px; opacity: .7; }
-.snake-area .segment:nth-child(9){ animation-delay: 0.96s; width: 22px; height: 22px; opacity: .65; }
-.snake-area .segment:nth-child(10){ animation-delay: 1.08s; width: 20px; height: 20px; opacity: .6; }
+.snake-area .segment:nth-child(odd) {
+  background: linear-gradient(135deg, #4c26b3, #455ad1);
+}
+
+.snake-area .segment:nth-child(2) {
+  transform-origin: center;
+  animation-delay: 0.12s;
+  width: 36px;
+  height: 36px;
+}
+
+.snake-area .segment:nth-child(3) {
+  animation-delay: 0.24s;
+  width: 34px;
+  height: 34px;
+  opacity: .95;
+}
+
+.snake-area .segment:nth-child(4) {
+  animation-delay: 0.36s;
+  width: 32px;
+  height: 32px;
+  opacity: .9;
+}
+
+.snake-area .segment:nth-child(5) {
+  animation-delay: 0.48s;
+  width: 30px;
+  height: 30px;
+  opacity: .85;
+}
+
+.snake-area .segment:nth-child(6) {
+  animation-delay: 0.60s;
+  width: 28px;
+  height: 28px;
+  opacity: .8;
+}
+
+.snake-area .segment:nth-child(7) {
+  animation-delay: 0.72s;
+  width: 26px;
+  height: 26px;
+  opacity: .75;
+}
+
+.snake-area .segment:nth-child(8) {
+  animation-delay: 0.84s;
+  width: 24px;
+  height: 24px;
+  opacity: .7;
+}
+
+.snake-area .segment:nth-child(9) {
+  animation-delay: 0.96s;
+  width: 22px;
+  height: 22px;
+  opacity: .65;
+}
+
+.snake-area .segment:nth-child(10) {
+  animation-delay: 1.08s;
+  width: 20px;
+  height: 20px;
+  opacity: .6;
+}
 
 /* keyframes que descrevem o caminho — edite posições para ajustar curva */
 @keyframes slither {
@@ -45,49 +105,66 @@
     left: -10%;
     top: 40%;
   }
+
   10% {
     left: 10%;
     top: 30%;
-    transform: translate(-50%,-50%) rotate(-10deg);
+    transform: translate(-50%, -50%) rotate(-10deg);
   }
+
   25% {
     left: 35%;
     top: 24%;
-    transform: translate(-50%,-50%) rotate(-20deg);
+    transform: translate(-50%, -50%) rotate(-20deg);
   }
+
   40% {
     left: 60%;
     top: 36%;
-    transform: translate(-50%,-50%) rotate(8deg);
+    transform: translate(-50%, -50%) rotate(8deg);
   }
+
   55% {
     left: 80%;
     top: 52%;
-    transform: translate(-50%,-50%) rotate(30deg);
+    transform: translate(-50%, -50%) rotate(30deg);
   }
+
   70% {
     left: 60%;
     top: 68%;
-    transform: translate(-50%,-50%) rotate(160deg);
+    transform: translate(-50%, -50%) rotate(160deg);
   }
+
   85% {
     left: 30%;
     top: 62%;
-    transform: translate(-50%,-50%) rotate(200deg);
+    transform: translate(-50%, -50%) rotate(200deg);
   }
+
   100% {
     left: -10%;
     top: 50%;
-    transform: translate(-50%,-50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
 
 /* responsivo: reduz a cobra em telas pequenas */
-@media (max-width:520px){
-  .snake-area{ height: 220px; }
-  .snake-area .segment{ width: 28px; height: 28px; }
-  .snake-area .segment:nth-child(10){ width: 16px; height: 16px; }
+@media (max-width:520px) {
+  .snake-area {
+    height: 220px;
+  }
+
+  .snake-area .segment {
+    width: 28px;
+    height: 28px;
+  }
+
+  .snake-area .segment:nth-child(10) {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 
@@ -120,6 +197,18 @@ body {
   color: #222;
   line-height: 1.6;
 }
+
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
 
 /* === CABEÇALHO === */
 header {
@@ -290,6 +379,7 @@ section p {
 .whatsapp {
   background: #25d366;
 }
+
 .whatsapp:hover {
   background: #1da851;
 }
@@ -297,6 +387,7 @@ section p {
 .instagram {
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
+
 .instagram:hover {
   opacity: 0.85;
 }
@@ -306,6 +397,7 @@ section p {
 .form-icon {
   background: #6a5acd;
 }
+
 .form-icon:hover {
   background: #5847c2;
 }
@@ -353,6 +445,30 @@ section p {
   animation: fadeIn 0.4s ease;
 }
 
+
+.divider {
+  height: 10px;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgb(73, 2, 121);
+}
+
+.divider::before {
+  top: 0;
+}
+
+.divider::after {
+  bottom: 0;
+}
+
 /* === RODAPÉ === */
 .footer-final {
   background: #6a5acd;
@@ -365,8 +481,15 @@ section p {
 
 /* === ANIMAÇÕES === */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* === RESPONSIVIDADE === */
@@ -380,7 +503,7 @@ section p {
     width: 200px;
     padding: 1rem;
     display: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 0 12px;
   }
 
@@ -464,7 +587,7 @@ section p {
   background: white;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   color: #333;
 }
 
@@ -515,13 +638,15 @@ section p {
 
 
 
-.linkedin{
-  color: #0A66C2 !important; /* azul oficial do LinkedIn */
+.linkedin {
+  color: #0A66C2 !important;
+  /* azul oficial do LinkedIn */
   transition: color 0.3s;
 }
 
-.linkedin:hover{
-  color: #16324e; /* azul mais escuro ao passar o mouse */
+.linkedin:hover {
+  color: #16324e;
+  /* azul mais escuro ao passar o mouse */
 }
 
 
@@ -564,7 +689,7 @@ section p {
     right: 0;
     background: #fff;
     padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: none;
     border-radius: 0 0 12px 12px;
   }
