@@ -101,7 +101,7 @@ function animate() {
       star.x, star.y, star.size * 2
     );
 
-    gradient.addColorStop(0, "black");
+    gradient.addColorStop(0, "white");
     gradient.addColorStop(1, "transparent");
 
     ctx.fillStyle = gradient;
