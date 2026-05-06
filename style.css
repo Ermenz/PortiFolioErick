@@ -12,6 +12,13 @@
   overflow: hidden;
 }
 
+.container-texto{
+  background-color: gray;
+  width: 400px;
+  height:400px;
+}
+
+
 /* estilo base do segmento da cobra */
 .snake-area .segment {
   position: absolute;
