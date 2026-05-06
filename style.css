@@ -360,6 +360,10 @@ nav ul li a:hover::after {
   margin: 0;
 }
 
+h2{
+  font-size: 2.0rem;
+  color: ;
+}
 
 .botao-inspirador button {
   margin-top: 1rem;
@@ -807,6 +811,7 @@ section p {
 
   .skills-section h2 {
     font-size: 1.5rem;
+    color: #e6d114d2;
   }
 
   /* FAQ / Perguntas */
