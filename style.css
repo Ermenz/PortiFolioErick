@@ -348,7 +348,7 @@ nav ul li a:hover::after {
   font-size: 1.2rem;
   
   /* Gradiente do Preto para um Cinza Escuro/Médio */
-  background: linear-gradient(to right, #000000, #fcf839);
+  background: linear-gradient(to right, #968b8b, #060c61);
   
   /* As propriedades mágicas para o gradiente "entrar" na letra */
   -webkit-background-clip: text;
