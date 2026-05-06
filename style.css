@@ -7,7 +7,7 @@
   /* altura do espaço da cobra */
   margin: 1.5rem auto;
   /*background: linear-gradient(135deg, #f8f9fc, #e3e7f1);*/
-  background: linear-gradient(135deg, #02478d 0%, #ced1d4 100%);
+  background: linear-gradient(135deg, #fcfcfc 0%, #ced1d4 100%);
   border-radius: 12px;
   position: relative;
   overflow: hidden;
