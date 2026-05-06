@@ -41,11 +41,11 @@ document.querySelectorAll('nav a').forEach(link => {
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 750);
 
-const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('yellow'), alpha: true });
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas'), alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: "orange" });
+const material = new THREE.MeshBasicMaterial({ color: "yellow" });
 const cube = new THREE.Mesh(geometry, material);
 
 scene.add(cube);
