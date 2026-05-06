@@ -19,6 +19,9 @@
   height:400px;
 }
 
+
+
+
 /* O wrapper centraliza o conteúdo e define uma largura máxima */
 .conteudo-wrapper {
   max-width: 1200px; /* Largura máxima do conteúdo */
@@ -138,6 +141,72 @@
   height: 20px;
   opacity: .6;
 }
+
+
+
+
+
+
+/* Container Principal da Seção */
+#conhecimentos {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra bem leve */
+  border-left: 5px solid #001f3f; /* Detalhe lateral com o azul escuro */
+}
+
+/* Título da Seção */
+#conhecimentos h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  /* Aplicando o gradiente preto e cinza que fizemos antes */
+  background: linear-gradient(to right, #000, #666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Estilizando cada linha de conhecimento */
+#conhecimentos p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  background: #f8f9fa; /* Um fundo cinza bem clarinho para cada item */
+  border-radius: 8px;
+  transition: transform 0.2s ease; /* Efeito ao passar o mouse */
+}
+
+/* Efeito Hover: quando o mouse passa por cima do item */
+#conhecimentos p:hover {
+  transform: translateX(10px); /* O texto "anda" um pouquinho para o lado */
+  background: #f0f2f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* keyframes que descrevem o caminho — edite posições para ajustar curva */
 @keyframes slither {
