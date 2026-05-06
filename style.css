@@ -144,9 +144,6 @@
 
 
 
-
-
-
 /* Container Principal da Seção */
 #conhecimentos {
   max-width: 1000px;
@@ -194,7 +191,9 @@
 
 
 
-
+h3{
+  font-size: 2.0rem;
+}
 
 
 
