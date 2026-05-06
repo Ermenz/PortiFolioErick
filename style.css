@@ -18,6 +18,39 @@
   height:400px;
 }
 
+/* O wrapper centraliza o conteúdo e define uma largura máxima */
+.conteudo-wrapper {
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: 0 auto;    /* Centraliza na tela */
+  padding: 0 20px;   /* Evita que o texto toque as bordas em celulares */
+}
+
+/* O container do texto cuida do espaçamento e estilo visual */
+.Container-texto {
+  background-color: #ffffff; /* Cor de fundo (opcional) */
+  padding: 40px;            /* Espaço interno entre o texto e a borda */
+  border-radius: 8px;       /* Bordas levemente arredondadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+  margin-top: 20px;
+}
+
+/* Estilizando o título */
+.Container-texto h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  border-bottom: 2px solid #007bff; /* Linha decorativa embaixo do título */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Estilizando os parágrafos */
+.Container-texto p {
+  line-height: 1.6; /* Melhora a leitura aumentando o espaço entre linhas */
+  color: #555;
+  margin-bottom: 15px;
+}
+
 
 /* estilo base do segmento da cobra */
 .snake-area .segment {
