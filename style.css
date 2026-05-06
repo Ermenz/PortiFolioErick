@@ -234,7 +234,7 @@ html {
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, #000c18 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #097bee 0%, #ffffff 100%);
   color: #222;
   line-height: 1.6;
 }
@@ -656,7 +656,7 @@ section p {
 
 .contato-form button {
   padding: 12px 25px;
-  background: linear-gradient(90deg, #190b68, #8583da);
+  background: linear-gradient(90deg, #311da1, #5a4fcf, #8583da);
   color: #fff;
   font-weight: bold;
   border: none;
