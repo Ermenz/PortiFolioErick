@@ -346,8 +346,20 @@ nav ul li a:hover::after {
 
 .texto-grande h1 {
   font-size: 2.2rem;
-  color: #333;
+  
+  /* Gradiente do Preto para um Cinza Escuro/Médio */
+  background: linear-gradient(to right, #000000, #666666);
+  
+  /* As propriedades mágicas para o gradiente "entrar" na letra */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Ajuste opcional para garantir que o gradiente apareça bem */
+  font-weight: 800; 
+  margin: 0;
 }
+
 
 .botao-inspirador button {
   margin-top: 1rem;
