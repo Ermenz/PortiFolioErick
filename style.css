@@ -60,7 +60,7 @@
   /* tamanho do segmento - altera espessura da cobra */
   height: 38px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #382ecc, #404adf);
+  background: linear-gradient(135deg, #e2e2eb, #bec1e6);
   box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
   top: 50%;
   left: -50px;
