@@ -345,10 +345,10 @@ nav ul li a:hover::after {
 }
 
 .texto-grande h1 {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   
   /* Gradiente do Preto para um Cinza Escuro/Médio */
-  background: linear-gradient(to right, #000000, #666666);
+  background: linear-gradient(to right, #000000, #fffefe);
   
   /* As propriedades mágicas para o gradiente "entrar" na letra */
   -webkit-background-clip: text;
