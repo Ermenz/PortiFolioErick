@@ -90,7 +90,7 @@ function animate() {
       star.x = canvasStars.width;
     }
 
-    ctx.fillStyle = "yellow";
+    ctx.fillStyle = "white";
     ctx.beginPath();
     ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
     ctx.fill();
@@ -98,7 +98,7 @@ function animate() {
 
     const gradient = ctx.createRadialGradient(
       star.x, star.y, 0,
-      star.x, star.y, star.size * 2
+      star.x, star.y, star.size * 3
     );
 
     gradient.addColorStop(0, "white");
