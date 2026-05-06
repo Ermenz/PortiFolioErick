@@ -234,7 +234,7 @@ html {
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, #f8f9fc, #e3e7f1);
+  background: linear-gradient(135deg, #000c18 0%, #ffffff 100%);
   color: #222;
   line-height: 1.6;
 }
