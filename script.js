@@ -51,6 +51,8 @@ const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 camera.position.z = 3;
 
+// 👇 ISSO QUE FALTAVA
+renderer.render(scene, camera);
 
 // ===== ESTRELAS =====
 const canvasStars = document.getElementById("stars");
