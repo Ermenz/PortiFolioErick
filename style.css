@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, #097bee 0%, #fff 100%);
+  background: linear-gradient(90deg, #311da1, #5a4fcf, #8583da);
   color: #222;
   line-height: 1.6;
 }
@@ -53,15 +53,58 @@ body {
   background: linear-gradient(135deg, #4c26b3, #455ad1);
 }
 
-.snake-area .segment:nth-child(2) { --size: 36px; --delay: .12s; }
-.snake-area .segment:nth-child(3) { --size: 34px; --delay: .24s; --opacity: .95; }
-.snake-area .segment:nth-child(4) { --size: 32px; --delay: .36s; --opacity: .9; }
-.snake-area .segment:nth-child(5) { --size: 30px; --delay: .48s; --opacity: .85; }
-.snake-area .segment:nth-child(6) { --size: 28px; --delay: .60s; --opacity: .8; }
-.snake-area .segment:nth-child(7) { --size: 26px; --delay: .72s; --opacity: .75; }
-.snake-area .segment:nth-child(8) { --size: 24px; --delay: .84s; --opacity: .7; }
-.snake-area .segment:nth-child(9) { --size: 22px; --delay: .96s; --opacity: .65; }
-.snake-area .segment:nth-child(10) { --size: 20px; --delay: 1.08s; --opacity: .6; }
+.snake-area .segment:nth-child(2) {
+  --size: 36px;
+  --delay: .12s;
+}
+
+.snake-area .segment:nth-child(3) {
+  --size: 34px;
+  --delay: .24s;
+  --opacity: .95;
+}
+
+.snake-area .segment:nth-child(4) {
+  --size: 32px;
+  --delay: .36s;
+  --opacity: .9;
+}
+
+.snake-area .segment:nth-child(5) {
+  --size: 30px;
+  --delay: .48s;
+  --opacity: .85;
+}
+
+.snake-area .segment:nth-child(6) {
+  --size: 28px;
+  --delay: .60s;
+  --opacity: .8;
+}
+
+.snake-area .segment:nth-child(7) {
+  --size: 26px;
+  --delay: .72s;
+  --opacity: .75;
+}
+
+.snake-area .segment:nth-child(8) {
+  --size: 24px;
+  --delay: .84s;
+  --opacity: .7;
+}
+
+.snake-area .segment:nth-child(9) {
+  --size: 22px;
+  --delay: .96s;
+  --opacity: .65;
+}
+
+.snake-area .segment:nth-child(10) {
+  --size: 20px;
+  --delay: 1.08s;
+  --opacity: .6;
+}
 
 
 @keyframes slither {
@@ -397,14 +440,12 @@ section p {
 }
 
 .instagram {
-  background: linear-gradient(
-    45deg,
-    #f09433,
-    #e6683c,
-    #dc2743,
-    #cc2366,
-    #bc1888
-  );
+  background: linear-gradient(45deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888);
 }
 
 .instagram:hover {
