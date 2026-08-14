@@ -28,6 +28,10 @@ header {
   overflow: hidden;
 }
 
+
+
+
+
 /* Linha de luz passando pela borda */
 header::after {
   content: "";
@@ -61,6 +65,37 @@ header::after {
   }
 }
 
+
+
+
+.borda-animada {
+  position: relative;
+  overflow: hidden;
+}
+
+.borda-animada::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+
+  border-radius: 50%;
+  border: 3px solid transparent;
+
+  border-top-color: white;
+  border-right-color: rgba(255, 255, 255, .3);
+
+  box-shadow:
+    0 0 8px white,
+    0 0 15px rgba(255, 255, 255, .7);
+
+  animation: girarBorda 2s linear infinite;
+}
+
+@keyframes girarBorda {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 
 /* ===== COBRA ===== */
