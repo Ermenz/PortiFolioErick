@@ -40,13 +40,15 @@ header::after {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8),
     #fff,
-    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8),
     transparent
   );
 
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 0 6px #fff,
+    0 0 12px rgba(255, 255, 255, 0.8);
 
   animation: luzHeader 3s linear infinite;
 }
