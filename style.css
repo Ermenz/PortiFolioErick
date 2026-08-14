@@ -852,19 +852,10 @@ section p {
     font-size: 1.2rem;
   }
 
-  .skills-grid {
-    gap: 10px;
-  }
+ 
 
-  .skill-card {
-    width: 70px;
-    padding: 8px;
-  }
 
-  .skills-section h2 {
-    font-size: 1.5rem;
-  }
-
+ 
   .pergunta {
     padding: .8rem;
   }
