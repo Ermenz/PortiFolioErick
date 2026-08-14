@@ -1,4 +1,7 @@
-/* ===== RESET ===== */
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,64 +17,237 @@ body {
   background: linear-gradient(90deg, #311da1, #5a4fcf, #8583da);
   color: #222;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
+
+/* =========================================================
+   CORES / UTILITÁRIOS
+========================================================= */
 
 .corDourado {
   color: #f2ff37;
 }
 
+
+/* =========================================================
+   HEADER
+========================================================= */
+
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 1.2rem 2rem;
+
+  background: #e6d114d2;
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+
   position: sticky;
   top: 0;
   z-index: 100;
+
   overflow: hidden;
 }
 
 
+/* =========================================================
+   LINHA DE LUZ DO HEADER
+========================================================= */
 
-
-
-/* Linha de luz passando pela borda */
 header::after {
   content: "";
+
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100px;
-  height: 4px;
 
-  background: linear-gradient(90deg,
-      transparent,
-      rgba(255, 255, 255, 0.9),
-      #fff,
-      rgba(255, 255, 255, 0.9),
-      transparent);
+  width: 140px;
+  height: 5px;
 
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, .7),
+    #fff,
+    rgba(255, 255, 255, .7),
+    transparent
+  );
+
+  box-shadow:
+    0 0 8px rgba(255, 255, 255, .9),
+    0 0 16px rgba(255, 255, 255, .5);
 
   animation: luzHeader 3s linear infinite;
+
+  pointer-events: none;
 }
 
 @keyframes luzHeader {
+
   0% {
     transform: translateX(100vw);
   }
 
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-160px);
   }
+
 }
+
+
+/* =========================================================
+   NOME / ELEMENTOS DO HEADER
+========================================================= */
+
+.nome-emoji {
+  display: flex;
+  flex-direction: column;
+}
+
+.nome-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.emoji {
+  font-size: 1.8rem;
+  margin-left: 4px;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+
+  list-style: none;
+
+  gap: 2.2rem;
+
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  position: relative;
+
+  color: #333;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  letter-spacing: .3px;
+
+  transition: color .3s ease;
+}
+
+
+/* Linha embaixo do menu */
+
+nav ul li a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 2px;
+
+  background: #6a5acd;
+
+  transition: width .3s ease;
+}
+
+
+/* Hover */
+
+nav ul li a:hover {
+  color: #6a5acd;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  font-size: 1.8rem;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SEÇÃO INICIAL
+========================================================= */
+
+.container-alinhado {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+
+  flex-wrap: wrap;
+
+  gap: 2rem;
+
+  width: 100%;
+
+  padding: 4rem 2rem;
+}
+
+
+/* =========================================================
+   FOTO REDONDA
+========================================================= */
 
 .imagem-redonda {
   width: 400px;
   height: 400px;
-  background: url('/images/Erick\ Menezes.jpeg') center/cover no-repeat;
+
+  flex-shrink: 0;
+
+  background: url('/images/Erick\ Menezes.jpeg')
+    center / cover no-repeat;
+
   border: 4px solid #6a5acd;
+
   border-radius: 50%;
-  box-shadow: 0 0 20px rgba(106, 90, 205, .4);
+
+  box-shadow:
+    0 0 20px rgba(106, 90, 205, .4);
+
   position: relative;
 }
+
+
+/* =========================================================
+   BORDA ANIMADA DA FOTO
+========================================================= */
 
 .borda-animada {
   position: relative;
@@ -79,20 +255,29 @@ header::after {
 
 .borda-animada::after {
   content: "";
+
   position: absolute;
-  inset: -5px;
+
+  inset: -6px;
+
   border-radius: 50%;
+
   border: 4px solid transparent;
+
   border-top-color: #fff;
   border-right-color: #fff;
+
   box-shadow:
     0 0 6px #fff,
     0 0 14px rgba(255, 255, 255, .8);
+
   animation: girarBorda 2s linear infinite;
+
   pointer-events: none;
 }
 
 @keyframes girarBorda {
+
   from {
     transform: rotate(0deg);
   }
@@ -100,17 +285,62 @@ header::after {
   to {
     transform: rotate(360deg);
   }
+
 }
 
 
+/* =========================================================
+   TEXTO DA APRESENTAÇÃO
+========================================================= */
+
+.texto-grande {
+  max-width: 650px;
+}
+
+.texto-grande h2 {
+  margin-bottom: 1rem;
+
+  font-size: 3rem;
+
+  color: #e6d114d2;
+}
+
+.texto-grande h1 {
+  margin: 0;
+
+  font-size: 1.5rem;
+
+  font-weight: 800;
+
+  background: linear-gradient(
+    to right,
+    #3821b6,
+    #060c61
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================================
+   MÃO ACENANDO
+========================================================= */
+
 .mao-acenando {
   display: inline-block;
+
   font-size: 2.5rem;
+
   transform-origin: 70% 70%;
+
   animation: acenar 1.5s ease-in-out infinite;
 }
 
 @keyframes acenar {
+
   0% {
     transform: rotate(0deg);
   }
@@ -135,43 +365,118 @@ header::after {
   100% {
     transform: rotate(0deg);
   }
+
 }
 
 
-/* ===== COBRA ===== */
+/* =========================================================
+   BOTÃO GITHUB
+========================================================= */
+
+.botao-inspirador {
+  margin-top: 1rem;
+}
+
+.botao-inspirador button {
+  padding: .7rem 1.5rem;
+
+  background: #6a5acd;
+
+  color: #fff;
+
+  border: 0;
+
+  border-radius: 30px;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background .3s,
+    transform .3s,
+    box-shadow .3s;
+}
+
+.botao-inspirador button:hover {
+  background: #5847c2;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 5px 15px rgba(88, 71, 194, .4);
+}
+
+
+/* =========================================================
+   COBRA
+========================================================= */
+
 .snake-area {
-  width: 100%;
+  width: calc(100% - 40px);
   max-width: 800px;
+
   height: 300px;
+
   margin: 1.5rem auto;
-  background: linear-gradient(135deg, #fcfcfc, #ced1d4);
+
+  background: linear-gradient(
+    135deg,
+    #fcfcfc,
+    #ced1d4
+  );
+
   border-radius: 12px;
+
   position: relative;
+
   overflow: hidden;
 }
 
 .snake-area .segment {
+
   --size: 38px;
   --delay: 0s;
   --opacity: 1;
 
   position: absolute;
+
   width: var(--size);
   height: var(--size);
+
   top: 50%;
   left: -50px;
+
   border-radius: 50%;
-  background: linear-gradient(135deg, #e2e2eb, #bec1e6);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
+
+  background: linear-gradient(
+    135deg,
+    #e2e2eb,
+    #bec1e6
+  );
+
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, .12);
+
   transform: translate(-50%, -50%);
-  animation: slither 8s linear infinite;
+
+  animation:
+    slither 8s linear infinite;
+
   animation-delay: var(--delay);
+
   opacity: var(--opacity);
+
   will-change: transform;
 }
 
 .snake-area .segment:nth-child(odd) {
-  background: linear-gradient(135deg, #4c26b3, #455ad1);
+  background: linear-gradient(
+    135deg,
+    #4c26b3,
+    #455ad1
+  );
 }
 
 .snake-area .segment:nth-child(2) {
@@ -227,8 +532,8 @@ header::after {
   --opacity: .6;
 }
 
-
 @keyframes slither {
+
   0% {
     left: -10%;
     top: 40%;
@@ -276,373 +581,505 @@ header::after {
     top: 50%;
     transform: translate(-50%, -50%) rotate(360deg);
   }
+
 }
 
 
-/* ===== CONTAINERS DE TEXTO ===== */
+/* =========================================================
+   SOBRE MIM
+========================================================= */
+
 #sobre {
   width: 100%;
 }
 
 .conteudo-wrapper {
-  width: 100%;
+  width: calc(100% - 40px);
+
   max-width: 1000px;
+
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+
+  padding: 3rem 0;
 }
 
 .Container-texto {
   width: 100%;
+
   background: #fff;
+
   padding: 40px;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, .1);
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, .1);
 }
 
 .Container-texto h2 {
   color: #333;
+
   margin-bottom: 20px;
+
   font-size: 2rem;
-  border-bottom: 2px solid #007bff;
+
+  border-bottom:
+    2px solid #007bff;
+
   display: inline-block;
+
   padding-bottom: 5px;
 }
 
 .Container-texto p {
-  line-height: 1.6;
+  line-height: 1.8;
+
   color: #555;
+
   margin-bottom: 15px;
+
   text-align: justify;
 }
 
-/* ===== ESTRELAS ===== */
-#star-container {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(135deg, #020024, #090979, #00d4ff);
-  overflow: hidden;
-}
+
+/* =========================================================
+   CANVAS / ESTRELAS
+========================================================= */
 
 #stars {
   position: fixed;
+
   inset: 0;
+
   width: 100%;
   height: 100%;
-  z-index: 1;
+
+  z-index: -1;
+
   pointer-events: none;
 }
 
 
-/* ===== CABEÇALHO ===== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 2rem;
-  background: #e6d114d2;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+/* =========================================================
+   SEÇÕES GERAIS
+========================================================= */
 
-.nome-emoji {
-  display: flex;
-  flex-direction: column;
-}
-
-.nome-header {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #333;
-}
-
-.emoji {
-  font-size: 1.8rem;
-  margin-left: 4px;
-}
-
-
-/* ===== MENU ===== */
-.nav-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 2.2rem;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li a {
-  position: relative;
-  color: #333;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  transition: color .3s;
-}
-
-/* Efeito da linha */
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 2px;
-  background: #6a5acd;
-  transition: width .3s;
-}
-
-/* Efeito ao passar o mouse */
-nav ul li a:hover {
-  color: #6a5acd;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-
-/* ===== SEÇÃO INICIAL ===== */
-.container-alinhado {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 3rem 2rem;
-}
-
-
-.texto-grande h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 800;
-  background: linear-gradient(to right, #3821b6, #060c61);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h2 {
-  font-size: 3rem;
-  color: #e6d114d2;
-}
-
-h3 {
-  font-size: 2rem;
-  padding-left: 20px;
-}
-
-
-/* ===== BOTÕES ===== */
-.botao-inspirador button {
-  margin-top: 1rem;
-  padding: .7rem 1.5rem;
-  background: #6a5acd;
-  color: #fff;
-  border: 0;
-  border-radius: 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.botao-inspirador button:hover {
-  background: #5847c2;
-  transform: translateY(-2px);
-}
-
-
-/* ===== SEÇÕES ===== */
 section {
   margin-bottom: 3rem;
 }
 
 section h2 {
   margin-bottom: 1rem;
+
   font-size: 1.8rem;
+
   color: #333;
+
   position: relative;
 }
 
 section h2::after {
   content: "";
+
   display: block;
+
   width: 60px;
   height: 3px;
+
   margin-top: 5px;
+
   background: #6a5acd;
 }
 
 section p {
   margin-top: .5rem;
+
   color: #444;
 }
 
 
-/* ===== CONHECIMENTOS ===== */
-#conhecimentos {
+/* =========================================================
+   HABILIDADES TÉCNICAS
+========================================================= */
+
+.skills-section {
+
+  width: calc(100% - 40px);
+
   max-width: 1000px;
-  margin: 40px auto;
+
+  margin: 50px auto;
+
   padding: 30px;
+
+  text-align: center;
+
   background: #fff;
-  border-left: 5px solid #f2ff37;
+
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, .05);
+}
+
+.skills-section h2 {
+
+  display: inline-block;
+
+  margin-bottom: 25px;
+
+  font-size: 1.8rem;
+
+  color: #0c0a0c;
+}
+
+.skills-grid {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.skill-card {
+
+  width: 90px;
+
+  min-height: 100px;
+
+  padding: 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  background: #fff;
+
+  border: 1px solid #e0e0e0;
+
+  border-radius: 10px;
+
+  transition:
+    transform .3s,
+    box-shadow .3s;
+}
+
+.skill-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, .12);
+}
+
+.skill-card img {
+
+  width: 48px;
+
+  height: 48px;
+
+  object-fit: contain;
+}
+
+.skill-card span {
+
+  font-size: .85rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CONHECIMENTOS E CERTIFICAÇÕES
+========================================================= */
+
+#conhecimentos {
+
+  width: calc(100% - 40px);
+
+  max-width: 1000px;
+
+  margin: 50px auto;
+
+  padding: 30px;
+
+  background: #fff;
+
+  border-left: 5px solid #f2ff37;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, .05);
 }
 
 #conhecimentos h2 {
+
   margin-bottom: 25px;
+
   font-size: 1.8rem;
-  background: linear-gradient(to right, #000, #666);
+
+  background:
+    linear-gradient(
+      to right,
+      #000,
+      #666
+    );
+
   -webkit-background-clip: text;
   background-clip: text;
+
   -webkit-text-fill-color: transparent;
 }
 
 #conhecimentos p {
+
   margin-bottom: 15px;
+
   padding: 10px 15px;
+
   background: #f8f9fa;
+
   border-radius: 8px;
+
   color: #444;
+
   font-size: 1.1rem;
+
   line-height: 1.8;
-  transition: transform .2s ease;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
 }
 
 #conhecimentos p:hover {
+
   transform: translateX(10px);
+
   background: #f0f2f5;
 }
 
 
-/* ===== REDES SOCIAIS ===== */
-.icones-sociais {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+/* =========================================================
+   LINKEDIN
+========================================================= */
+
+#contato-info {
+
+  width: calc(100% - 40px);
+
+  max-width: 1000px;
+
+  margin: 50px auto;
+
+  padding: 40px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, .08);
+
+  border-radius: 12px;
 }
 
-.icones-sociais a {
-  width: 45px;
-  height: 45px;
-  display: flex;
+#contato-info h2 {
+
+  margin-bottom: 20px;
+
+  color: #f2ff37;
+}
+
+#contato-info h2::after {
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Ícone */
+
+#contato-info .linkedin {
+
+  display: inline-flex;
+
   justify-content: center;
   align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  margin-top: 10px;
+
   border-radius: 50%;
-  color: #fff;
-  font-size: 1.4rem;
-  transition: .3s;
+
+  background: #0a66c2;
+
+  color: #fff !important;
+
+  font-size: 1.5rem;
+
+  text-decoration: none;
+
+  transition:
+    transform .3s,
+    background .3s,
+    box-shadow .3s;
 }
 
-.whatsapp {
-  background: #25d366;
-}
+#contato-info .linkedin:hover {
 
-.whatsapp:hover {
-  background: #1da851;
-}
+  background: #084d91;
 
-.instagram {
-  background: linear-gradient(45deg,
-      #f09433,
-      #e6683c,
-      #dc2743,
-      #cc2366,
-      #bc1888);
-}
+  transform:
+    translateY(-5px)
+    scale(1.05);
 
-.instagram:hover {
-  opacity: .85;
-}
-
-.form-icon {
-  background: #6a5acd;
-}
-
-.form-icon:hover {
-  background: #5847c2;
-}
-
-.linkedin {
-  color: #0a66c2 !important;
-  transition: color .3s;
-}
-
-.linkedin:hover {
-  color: #16324e;
+  box-shadow:
+    0 8px 20px
+    rgba(10, 102, 194, .4);
 }
 
 
-/* ===== FAQ ===== */
+/* =========================================================
+   PROJETOS / FAQ
+========================================================= */
+
+#perguntas-frequentes {
+
+  width: calc(100% - 40px);
+
+  max-width: 1000px;
+
+  margin: 50px auto;
+}
+
+.contato {
+
+  width: 100%;
+}
+
+.contato h3 {
+
+  font-size: 2rem;
+
+  padding-left: 20px;
+
+  margin-bottom: 20px;
+}
+
 .faq {
+
   margin-top: 1.5rem;
 }
 
 .pergunta {
+
   margin-bottom: 1rem;
+
   padding: 1rem;
+
   background: #fff;
+
   border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, .08);
+
+  box-shadow:
+    0 3px 8px
+    rgba(0, 0, 0, .08);
 }
 
 .pergunta strong {
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   cursor: pointer;
+
   font-weight: 600;
 }
 
+.pergunta .descricao {
+
+  display: block;
+
+  animation:
+    fadeIn .4s ease;
+}
+
+.pergunta .descricao p {
+
+  margin-bottom: 10px;
+}
+
+.pergunta .descricao a {
+
+  color: #6a5acd;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.pergunta .descricao a:hover {
+
+  text-decoration: underline;
+}
+
 .toggle-btn {
+
   width: 25px;
   height: 25px;
+
   background: #6a5acd;
+
   color: #fff;
+
   border: 0;
+
   border-radius: 50%;
+
   cursor: pointer;
+
   font-size: 1rem;
 }
 
-.pergunta .descricao,
-.pergunta.open .descricao {
-  display: block;
-  animation: fadeIn .4s ease;
-}
 
+/* =========================================================
+   DIVISOR
+========================================================= */
 
-/* ===== DIVISOR ===== */
 .divider {
+
   height: 10px;
+
   position: relative;
 }
 
 .divider::before,
 .divider::after {
+
   content: "";
+
   position: absolute;
+
   left: 0;
   right: 0;
+
   height: 2px;
-  background: rgb(73, 2, 121);
+
+  background:
+    rgb(73, 2, 121);
 }
 
 .divider::before {
@@ -653,262 +1090,568 @@ section p {
   bottom: 0;
 }
 
-.skills-section {
-  width: 100%;
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 0 20px;
-  text-align: center;
-}
 
-.skills-section h2 {
-  display: inline-block;
-  margin-bottom: 25px;
-  font-size: 1.8rem;
-  color: #0c0a0c;
-}
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
 
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.skill-card {
-  width: 90px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-}
-
-/* ===== FORMULÁRIO ===== */
 #fale-comigo {
+
+  width: 100%;
+
   padding: 60px 20px;
+
   background: #e6d114d2;
+
   text-align: center;
 }
 
 .contato-form {
+
+  width: 100%;
+
   max-width: 500px;
+
   margin: auto;
+
   padding: 30px;
+
   background: #fff;
+
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+
+  box-shadow:
+    0 0 20px
+    rgba(0, 0, 0, .1);
+
   color: #333;
 }
 
 .contato-form h2 {
+
   margin-bottom: 20px;
+
   color: #190b68;
+
   font-size: 28px;
 }
 
 .contato-form input,
 .contato-form textarea {
+
   width: 100%;
+
   padding: 12px;
+
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+
+  border:
+    1px solid #ccc;
+
   border-radius: 8px;
+
   font-size: 16px;
+
+  font-family: inherit;
 }
 
 .contato-form textarea {
+
   resize: vertical;
+
   min-height: 100px;
 }
 
 .contato-form button {
+
   padding: 12px 25px;
-  background: linear-gradient(90deg, #311da1, #5a4fcf, #8583da);
+
+  background:
+    linear-gradient(
+      90deg,
+      #311da1,
+      #5a4fcf,
+      #8583da
+    );
+
   color: #fff;
+
   border: 0;
+
   border-radius: 30px;
+
   font-weight: bold;
+
   cursor: pointer;
-  transition: transform .2s, box-shadow .2s;
+
+  transition:
+    transform .2s,
+    box-shadow .2s;
 }
 
 .contato-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(24, 18, 200, .5);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 4px 10px
+    rgba(24, 18, 200, .5);
 }
 
 #form-message {
+
   margin-top: 10px;
+
   font-weight: bold;
 }
 
 
-/* ===== RODAPÉ ===== */
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
 .footer-final {
+
   margin-top: 2rem;
+
   padding: 1rem;
-  background: linear-gradient(90deg, #311da1, #5a4fcf, #8583da);
+
+  background:
+    linear-gradient(
+      90deg,
+      #311da1,
+      #5a4fcf,
+      #8583da
+    );
+
   color: #fff;
+
   text-align: center;
+
   font-size: .9rem;
 }
 
 
-/* ===== ANIMAÇÕES ===== */
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
+
 @keyframes fadeIn {
+
   from {
+
     opacity: 0;
-    transform: translateY(-5px);
+
+    transform:
+      translateY(-5px);
   }
 
   to {
+
     opacity: 1;
-    transform: translateY(0);
+
+    transform:
+      translateY(0);
   }
 }
 
 
-/* ===== RESPONSIVO ===== */
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
 @media (max-width: 768px) {
+
+  /* HEADER */
+
   header {
+
     flex-direction: column;
+
     align-items: flex-start;
+
     padding: 1rem;
   }
 
+
   .nome-emoji {
+
     flex-direction: row;
+
     align-items: center;
+
     margin-bottom: .5rem;
   }
 
+
   .nome-header {
+
     font-size: 1.3rem;
   }
 
+
   .emoji {
+
     margin-left: 6px;
+
     font-size: 1.5rem;
   }
 
+
+  /* MENU */
+
   .nav-wrapper {
+
     width: 100%;
   }
+
+
+  nav {
+
+    width: 100%;
+  }
+
 
   nav ul {
+
     position: absolute;
-    top: 70px;
-    right: 0;
+
+    top: 100%;
+
+    left: 0;
+
     width: 100%;
+
     display: none;
+
     flex-direction: column;
+
+    gap: 0;
+
     padding: 1rem;
+
     background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
-    border-radius: 0 0 12px 12px;
+
+    box-shadow:
+      0 4px 10px
+      rgba(0, 0, 0, .1);
+
+    border-radius:
+      0 0 12px 12px;
   }
 
+
   nav ul.show {
+
     display: flex;
   }
 
+
   nav ul li {
+
     margin: .8rem 0;
   }
 
+
   .menu-toggle {
+
     display: block;
-    align-self: flex-end;
+
+    position: absolute;
+
+    right: 1rem;
+    top: 1rem;
   }
 
+
+  /* APRESENTAÇÃO */
+
   .container-alinhado {
+
     flex-direction: column;
-    padding: 2rem 1rem;
+
+    padding: 3rem 1rem;
+
     text-align: center;
   }
 
 
+  .imagem-redonda {
 
-  .texto-grande h1 {
-    font-size: 1.8rem;
+    width: 300px;
+
+    height: 300px;
   }
 
+
+  .texto-grande {
+
+    width: 100%;
+
+    max-width: 600px;
+  }
+
+
+  .texto-grande h2 {
+
+    font-size: 2.2rem;
+  }
+
+
+  .texto-grande h1 {
+
+    font-size: 1.3rem;
+  }
+
+
+  /* BOTÃO */
+
   .botao-inspirador button {
+
     width: 80%;
+
     padding: .8rem;
+
     font-size: .95rem;
   }
 
-  .icones-sociais {
-    justify-content: center;
+
+  /* COBRA */
+
+  .snake-area {
+
+    height: 220px;
+
+    width:
+      calc(100% - 30px);
   }
 
-  .icones-sociais a {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+
+  .snake-area .segment {
+
+    --size: 28px;
   }
 
- 
 
+  .snake-area .segment:nth-child(10) {
 
- 
-  .pergunta {
-    padding: .8rem;
+    --size: 16px;
   }
 
-  .toggle-btn {
-    width: 22px;
-    height: 22px;
-    font-size: .9rem;
+
+  /* SOBRE */
+
+  .conteudo-wrapper {
+
+    width:
+      calc(100% - 30px);
+
+    padding:
+      2rem 0;
   }
 
-  .contato-form {
+
+  .Container-texto {
+
+    padding: 25px;
+  }
+
+
+  .Container-texto h2 {
+
+    font-size: 1.7rem;
+  }
+
+
+  .Container-texto p {
+
+    font-size: .95rem;
+  }
+
+
+  /* HABILIDADES */
+
+  .skills-section {
+
+    width:
+      calc(100% - 30px);
+
     padding: 20px;
   }
 
+
+  .skills-grid {
+
+    gap: 10px;
+  }
+
+
+  .skill-card {
+
+    width: 75px;
+
+    min-height: 90px;
+
+    padding: 8px;
+  }
+
+
+  .skill-card img {
+
+    width: 40px;
+
+    height: 40px;
+  }
+
+
+  .skill-card span {
+
+    font-size: .75rem;
+  }
+
+
+  /* CONHECIMENTOS */
+
+  #conhecimentos {
+
+    width:
+      calc(100% - 30px);
+
+    padding: 20px;
+  }
+
+
+  #conhecimentos p {
+
+    font-size: .95rem;
+  }
+
+
+  /* LINKEDIN */
+
+  #contato-info {
+
+    width:
+      calc(100% - 30px);
+
+    padding: 30px 20px;
+  }
+
+
+  /* PROJETOS */
+
+  #perguntas-frequentes {
+
+    width:
+      calc(100% - 30px);
+  }
+
+
+  .contato h3 {
+
+    font-size: 1.6rem;
+
+    padding-left: 10px;
+  }
+
+
+  .pergunta {
+
+    padding: .8rem;
+  }
+
+
+  /* FORMULÁRIO */
+
+  .contato-form {
+
+    padding: 20px;
+  }
+
+
   .contato-form h2 {
+
     font-size: 24px;
   }
 
+
   .contato-form input,
   .contato-form textarea {
+
     padding: 10px;
+
     font-size: 14px;
   }
 
+
   .contato-form button {
+
     width: 100%;
+
     padding: 12px;
+
     font-size: 16px;
   }
 
-  .snake-area {
-    height: 220px;
-  }
-
-  .snake-area .segment {
-    --size: 28px;
-  }
-
-  .snake-area .segment:nth-child(10) {
-    --size: 16px;
-  }
 }
 
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
 @media (max-width: 520px) {
+
+  .imagem-redonda {
+
+    width: 250px;
+
+    height: 250px;
+  }
+
+
+  .texto-grande h2 {
+
+    font-size: 1.8rem;
+  }
+
+
+  .texto-grande h1 {
+
+    font-size: 1.1rem;
+  }
+
+
+  .texto-grande h1 br {
+
+    display: none;
+  }
+
+
+  .mao-acenando {
+
+    font-size: 2rem;
+  }
+
+
   .snake-area {
-    height: 220px;
+
+    height: 200px;
   }
 
-  .snake-area .segment {
-    --size: 28px;
+
+  .skill-card {
+
+    width: 70px;
   }
 
-  .snake-area .segment:nth-child(10) {
-    --size: 16px;
+
+  #contato-info .linkedin {
+
+    width: 55px;
+
+    height: 55px;
   }
+
 }
