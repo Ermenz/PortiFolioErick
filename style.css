@@ -252,33 +252,40 @@ header {
 /* ===== MENU ===== */
 .nav-wrapper {
   display: flex;
+  align-items: center;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
   position: relative;
   color: #333;
   text-decoration: none;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   transition: color .3s;
 }
 
+/* Efeito da linha */
 nav ul li a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -5px;
   width: 0;
   height: 2px;
   background: #6a5acd;
-  transition: .3s;
+  transition: width .3s;
 }
 
+/* Efeito ao passar o mouse */
 nav ul li a:hover {
   color: #6a5acd;
 }
