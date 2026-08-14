@@ -17,6 +17,11 @@ body {
 }
 
 
+.corDourado{
+  background-color: #f2ff37;
+}
+
+
 /* ===== COBRA ===== */
 .snake-area {
   width: 100%;
