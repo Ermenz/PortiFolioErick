@@ -1655,3 +1655,138 @@ section p {
   }
 
 }
+
+
+
+
+/* ===== CONHECIMENTOS E CERTIFICAÇÕES ===== */
+
+#certificacoes {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+
+  background: #fff;
+
+  border-left: 5px solid #f2ff37;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  text-align: left;
+}
+
+
+/* Título */
+
+#certificacoes h2 {
+  margin-bottom: 25px;
+
+  font-size: 1.8rem;
+
+  background: linear-gradient(
+    to right,
+    #000,
+    #666
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Linha abaixo do título */
+
+#certificacoes h2::after {
+  content: "";
+
+  display: block;
+
+  width: 60px;
+  height: 3px;
+
+  margin-top: 8px;
+
+  background: #6a5acd;
+
+  border-radius: 2px;
+}
+
+
+/* Cada conhecimento */
+
+#certificacoes p {
+  margin-bottom: 15px;
+
+  padding: 12px 15px;
+
+  background: #f8f9fa;
+
+  border-radius: 8px;
+
+  color: #444;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Efeito ao passar o mouse */
+
+#certificacoes p:hover {
+  transform: translateX(10px);
+
+  background: #f0f2f5;
+}
+
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 768px) {
+
+  #certificacoes {
+    width: calc(100% - 30px);
+
+    margin: 35px auto;
+
+    padding: 25px 20px;
+  }
+
+  #certificacoes h2 {
+    font-size: 1.5rem;
+  }
+
+  #certificacoes p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  #certificacoes {
+    width: calc(100% - 20px);
+
+    padding: 20px 15px;
+  }
+
+  #certificacoes h2 {
+    font-size: 1.3rem;
+  }
+
+  #certificacoes p {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+}
