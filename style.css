@@ -810,11 +810,7 @@ section p {
     text-align: center;
   }
 
-  .imagem-redonda {
-    width: 250px;
-    height: 250px;
-    margin-bottom: 1rem;
-  }
+  
 
   .texto-grande h1 {
     font-size: 1.8rem;
