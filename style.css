@@ -648,7 +648,7 @@ section p {
 .footer-final {
   margin-top: 2rem;
   padding: 1rem;
-  background: #0e62c2;
+  background: linear-gradient(90deg, #311da1, #5a4fcf, #8583da);
   color: #fff;
   text-align: center;
   font-size: .9rem;
