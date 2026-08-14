@@ -35,7 +35,7 @@ header::after {
   bottom: 0;
   left: 0;
   width: 150px;
-  height: 6px;
+  height: 5px;
 
   background: linear-gradient(
     90deg,
