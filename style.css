@@ -102,6 +102,42 @@ header::after {
   }
 }
 
+
+.mao-acenando {
+  display: inline-block;
+  font-size: 2.5rem;
+  transform-origin: 70% 70%;
+  animation: acenar 1.5s ease-in-out infinite;
+}
+
+@keyframes acenar {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(20deg);
+  }
+
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  45% {
+    transform: rotate(20deg);
+  }
+
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  75%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
 /* ===== COBRA ===== */
 .snake-area {
   width: 100%;
