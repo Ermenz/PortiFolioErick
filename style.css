@@ -653,9 +653,8 @@ section p {
   bottom: 0;
 }
 
-
-/* ===== SKILLS ===== */
 .skills-section {
+  width: 100%;
   max-width: 1000px;
   margin: 50px auto;
   padding: 0 20px;
@@ -667,17 +666,6 @@ section p {
   margin-bottom: 25px;
   font-size: 1.8rem;
   color: #0c0a0c;
-  position: relative;
-}
-
-.skills-section h2::after {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 3px;
-  margin: 8px auto 0;
-  background: #6fb7e2;
-  border-radius: 2px;
 }
 
 .skills-grid {
@@ -697,7 +685,6 @@ section p {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
 }
-
 
 /* ===== FORMULÁRIO ===== */
 #fale-comigo {
