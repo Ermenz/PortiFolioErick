@@ -17,7 +17,7 @@ body {
 }
 
 
-.corDourado{
+.corDourado {
   color: #f2ff37;
 }
 
@@ -41,14 +41,12 @@ header::after {
   width: 100px;
   height: 4px;
 
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.9),
-    #fff,
-    rgba(255, 255, 255, 0.9),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.9),
+      #fff,
+      rgba(255, 255, 255, 0.9),
+      transparent);
 
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 
@@ -65,37 +63,44 @@ header::after {
   }
 }
 
-
+.imagem-redonda {
+  width: 400px;
+  height: 400px;
+  background: url('/images/Erick\ Menezes.jpeg') center/cover no-repeat;
+  border: 4px solid #6a5acd;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(106, 90, 205, .4);
+  position: relative;
+}
 
 .borda-animada {
   position: relative;
-  overflow: hidden;
 }
 
 .borda-animada::after {
   content: "";
   position: absolute;
-  inset: -4px;
-
+  inset: -5px;
   border-radius: 50%;
-  border: 3px solid transparent;
-
-  border-top-color: white;
-  border-right-color: rgba(255, 255, 255, .3);
-
+  border: 4px solid transparent;
+  border-top-color: #fff;
+  border-right-color: #fff;
   box-shadow:
-    0 0 8px white,
-    0 0 15px rgba(255, 255, 255, .7);
-
+    0 0 6px #fff,
+    0 0 14px rgba(255, 255, 255, .8);
   animation: girarBorda 2s linear infinite;
+  pointer-events: none;
 }
 
 @keyframes girarBorda {
+  from {
+    transform: rotate(0deg);
+  }
+
   to {
     transform: rotate(360deg);
   }
 }
-
 
 /* ===== COBRA ===== */
 .snake-area {
@@ -386,15 +391,7 @@ nav ul li a:hover::after {
   padding: 3rem 2rem;
 }
 
-.imagem-redonda {
-  width: 400px;
-  height: 400px;
-  background: url('/images/Erick\ Menezes.jpeg') center/cover no-repeat;
-  border: 4px solid #6a5acd;
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(106, 90, 205, .4);
-  position: relative;
-}
+
 .texto-grande h1 {
   margin: 0;
   font-size: 1.5rem;
@@ -810,7 +807,7 @@ section p {
     text-align: center;
   }
 
-  
+
 
   .texto-grande h1 {
     font-size: 1.8rem;
